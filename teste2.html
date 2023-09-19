@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<body>
+    <script>
+        var pessoas = [];
+        
+        var resposta = prompt("Deseja inserir informação? 1- sim 0- não");
+
+        while(resposta == "1") {
+
+        var Idade = parseInt(prompt("Digite sua Idade"));
+        var Nome = prompt("Digite seu Nome");
+        var CPF = prompt("Digite seu CPF");
+        
+        var dados =  [  Idade, Nome, CPF ]
+        /*var dados = [];
+        dados.push(Nome);
+        dados.push(Idade);
+        dados.push(CPF);*/
+
+        pessoas.push(dados);
+        resposta = prompt("Desejar inserir infromação? 1- sim 0-não");
+     }
+      
+     for(var i = 0; i <= pessoas.length -1; i++) {
+        document.write(" Idade:"+pessoas[i][0]+" Nome:"+pessoas[i][1]+" CPF:"+pessoas[i][2]);
+        document.write("<br>")
+     }
+     
+     console.log(pessoas);
+    </script>
+</body>
+</html>

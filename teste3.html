@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var rendimentoSemana = [];
+        
+        for(var dia = 1; dia <= 7; dia++) {
+        var rendimentoManha = parseFloat(prompt("Digite o rendimento da manhã"));
+        var rendimentoTarde = parseFloat(prompt("Digite o rendimento da tarde"));
+
+        var rendimentoDia = [rendimentoManha, rendimentoTarde];
+
+        rendimentoSemana.push(rendimentoDia);
+        }
+        var totalRendimentoManha=0;
+        var totalRendimentotarde=0;
+        for(var i = 0; i <= rendimentoSemana.length -1; i++) {
+
+            totalRendimentoManha += rendimentoSemana[i][0];
+            totalRendimentoTarde += rendimentoSemana[i][1];
+
+            document.write("Tota para o dia "+i+":"+(rendimentoSemana[i][0] + 
+            rendimentoSemana[i][1]));
+            document.write("<br>")
+
+        }
+
+        document.write("Total de rendimento da Manhã: "+totalRendimentoManha);
+        document.write("<br>");
+        document.write("Total de rendimento da Tarde "+totalRendimentoTarde);
+    </script>
+</body>
+</html>
